@@ -1,1 +1,2 @@
 binder_call(vndservicemanager, vendor_cnd)
+binder_call(vndservicemanager, vendor_hal_oplus_touch)

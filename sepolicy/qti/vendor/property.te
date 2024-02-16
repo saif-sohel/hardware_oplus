@@ -1,5 +1,6 @@
 # Fingerprint
 vendor_internal_prop(vendor_fingerprint_prop)
+vendor_internal_prop(vendor_optouch_prop)
 
 # Modem
 vendor_internal_prop(vendor_modem_prop)
