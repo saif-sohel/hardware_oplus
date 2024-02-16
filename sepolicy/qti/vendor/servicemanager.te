@@ -1,0 +1,5 @@
+allow servicemanager hal_oplus_touch_aidl_default:binder { call transfer };
+allow servicemanager hal_oplus_touch_aidl_default:dir search;
+allow servicemanager hal_oplus_touch_aidl_default:file { read open };
+allow servicemanager hal_oplus_touch_aidl_default:process getattr;
+allow servicemanager vendor_hal_oplus_touch_aidl_server:binder transfer;

@@ -1,0 +1,2 @@
+allow init hal_oplus_touch_daemon: process { siginh rlimitinh transition };
+allow init hal_oplus_touch_aidl_default: process { siginh rlimitinh transition };

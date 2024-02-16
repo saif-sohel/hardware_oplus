@@ -1,0 +1,48 @@
+type hal_oplus_touch_daemon, domain;
+type hal_oplus_touch_daemon_exec, file_type, exec_type, vendor_file_type;
+init_daemon_domain(hal_oplus_touch_daemon)
+
+binder_call(hal_oplus_touch_daemon, system_server)
+binder_call(vendor_hal_oplus_touch_daemon_client, vendor_hal_oplus_touch_daemon_server)
+binder_call(vendor_hal_oplus_touch_daemon_server, vendor_hal_oplus_touch_daemon_client)
+allow vendor_hal_oplus_touch_daemon_client vendor_hal_oplus_touch_daemon_server:binder { call transfer };
+allow vendor_hal_oplus_touch_daemon_client vendor_hal_oplus_touch_daemon_server:fd use;
+allow vendor_hal_oplus_touch_daemon_server vendor_hal_oplus_touch_daemon_client:binder { call transfer };
+allow vendor_hal_oplus_touch_daemon_server vendor_hal_oplus_touch_daemon_client:fd use;
+
+
+allow hal_oplus_touch_aidl_default hal_oplus_touch_daemon:binder call;
+allow hal_oplus_touch_aidl_default hal_oplus_touch_daemon:unix_dgram_socket sendto;
+
+allow hal_oplus_touch_daemon ctl_start_prop:property_service set;
+allow hal_oplus_touch_daemon ctl_stop_prop:property_service set;
+allow hal_oplus_touch_daemon hal_oplus_touch_aidl_default:binder call;
+allow hal_oplus_touch_daemon hal_oplus_touch_aidl_default:unix_dgram_socket sendto;
+allow hal_oplus_touch_daemon hal_oplus_touch_aidl_service:binder call;
+allow hal_oplus_touch_daemon hal_oplus_touch_daemon:capability sys_nice;
+allow hal_oplus_touch_daemon hal_oplus_touch_daemon_exec:file { read getattr map execute open entrypoint };
+allow hal_oplus_touch_daemon init:unix_stream_socket connectto;
+allow hal_oplus_touch_daemon input_device:chr_file { read write open };
+allow hal_oplus_touch_daemon input_device:dir search;
+allow hal_oplus_touch_daemon oplus_touchDaemon_device:chr_file { ioctl read write getattr lock append map open watch watch_reads };
+allow hal_oplus_touch_daemon proc_bus_input:file { ioctl read getattr lock map open watch watch_reads };
+allow hal_oplus_touch_daemon property_socket:sock_file { read write };
+allow hal_oplus_touch_daemon servicemanager:binder call;
+allow hal_oplus_touch_daemon socket_device:dir { read write create getattr setattr unlink open add_name remove_name };
+allow hal_oplus_touch_daemon socket_device:sock_file { read write create getattr setattr unlink open };
+allow hal_oplus_touch_daemon system_oplus_touch_prop:file { read getattr map open };
+allow hal_oplus_touch_daemon touchDeamonBinder_service:service_manager add;
+allow hal_oplus_touch_daemon vendor_data_file:dir { write create add_name remove_name };
+allow hal_oplus_touch_daemon vendor_data_file:file { read write create getattr setattr append map open };
+allow hal_oplus_touch_daemon vendor_oplus_touch_prop:file { read getattr map open };
+allow hal_oplus_touch_daemon vendor_oplus_touch_prop:property_service set;
+allow hal_oplus_touch_daemon vendor_persist_oplus_touch_file:dir { ioctl read write create getattr setattr lock rename open watch watch_reads add_name remove_name reparent search rmdir };
+allow hal_oplus_touch_daemon vendor_persist_oplus_touch_file:fifo_file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
+allow hal_oplus_touch_daemon vendor_persist_oplus_touch_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
+allow hal_oplus_touch_daemon vendor_persist_oplus_touch_file:sock_file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
+allow hal_oplus_touch_daemon vendor_proc_display:chr_file { ioctl read write open };
+allow hal_oplus_touch_daemon vendor_proc_display:dir { ioctl read getattr lock open watch watch_reads search };
+allow hal_oplus_touch_daemon vendor_proc_display:file { ioctl read write create setattr unlink getattr lock map open watch watch_reads };
+allow hal_oplus_touch_daemon vendor_proc_oplus_touch:file { open read };
+allow hal_oplus_touch_daemon vndbinder_device:chr_file { ioctl read write map open };
+allow hal_oplus_touch_daemon vndservicemanager:binder { call transfer };
