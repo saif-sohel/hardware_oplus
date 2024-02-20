@@ -26,8 +26,13 @@ genfscon proc /oplus_rf    u:object_r:vendor_proc_engineer:s0
 genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/soc/soc:spf_core_platform/soc:spf_core_platform:lpass-cdc/wcd938x-codec/extcon u:object_r:sysfs_extcon:s0
 genfscon sysfs /class/extcon/extcon0/ u:object_r:sysfs_extcon:s0
+
 # Fingerprint
 genfscon proc /fp_id    u:object_r:vendor_proc_fingerprint:s0
+
+# Graphics
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-    u:object_r:vendor_sysfs_sde_crtc:s0
+
 
 # Input devices
 genfscon proc /bus/input/devices u:object_r:vendor_proc_oplus_sched:s0
