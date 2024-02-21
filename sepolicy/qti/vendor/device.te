@@ -1,3 +1,6 @@
+# Consumer IR
+type vendor_oplusir_device, file_type;
+
 # Fingerprint
 type fingerprint_device, dev_type;
 
