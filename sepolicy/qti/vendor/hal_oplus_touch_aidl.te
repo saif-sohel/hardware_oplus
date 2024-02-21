@@ -50,5 +50,5 @@ allow hal_oplus_touch_aidl vendor_persist_optouch_file:file create;
 allow hal_oplus_touch_aidl vendor_persist_optouch_log_file:file unlink;
 allow hal_oplus_touch_aidl input_device:chr_file open;
 allow hal_oplus_touch_aidl vendor_persist_optouch_file:file setattr;
+allow hal_oplus_touch_aidl vendor_persist_optouch_log_file:file setattr;
 allow hal_oplus_touch_aidl self:binder call;
-
