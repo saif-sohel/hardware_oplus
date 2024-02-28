@@ -25,6 +25,9 @@ vendor.touchdaemon.            u:object_r:vendor_optouch_prop:s0
 vendor.oplus.touch.            u:object_r:vendor_optouch_prop:s0
 vendor.oplus.touchDaemon.      u:object_r:vendor_optouch_prop:s0
 
+# Power
+vendor.powerhal.    u:object_r:vendor_powerhal_prop:s0
+
 # Radio
 persist.vendor.oplus.radio.    u:object_r:vendor_radio_prop:s0
 ro.vendor.oplus.radio.         u:object_r:vendor_radio_prop:s0
