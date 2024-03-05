@@ -8,9 +8,6 @@ type vendor_persist_camera_file, file_type;
 # Charging
 type vendor_proc_wireless, fs_type, proc_type;
 
-# Consumer IR
-type vendor_oplusir_device, file_type;
-
 # Display
 type vendor_proc_display, fs_type, proc_type;
 
@@ -26,7 +23,6 @@ type vendor_proc_oplus_sched, fs_type, proc_type;
 
 # OPlus touch
 type vendor_persist_optouch_file, file_type;
-type vendor_persist_optouch_log_file, file_type;
 
 # Sensors
 type vendor_proc_eng_cali_file, fs_type, proc_type;
