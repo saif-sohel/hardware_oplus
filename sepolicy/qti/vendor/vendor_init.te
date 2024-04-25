@@ -1,9 +1,9 @@
 allow vendor_init proc_sched:file w_file_perms;
 allow vendor_init vendor_proc_display:file w_file_perms;
-allow vendor_init vendor_oplus_touch_prop:property_service set;
 allow vendor_init oplus_touchDaemon_device:chr_file setattr;
 allow vendor_init hal_oplus_touch_daemon_exec:file { read getattr map execute open };
 allow vendor_init hal_oplus_touch_aidl_default_exec:file { read getattr map execute open };
 
 set_prop(vendor_init, system_oplus_project_prop)
 set_prop(vendor_init, vendor_powerhal_prop)
+set_prop(vendor_init, vendor_oplus_touch_prop)

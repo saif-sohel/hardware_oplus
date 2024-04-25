@@ -8,23 +8,16 @@ binder_call(vendor_hal_oplus_touch_aidl_server, vendor_hal_oplus_touch_aidl_clie
 allow hal_oplus_touch_aidl_default hal_oplus_touch_aidl_service:service_manager add;
 
 allow vendor_hal_oplus_touch_aidl_client vendor_hal_oplus_touch_aidl_server:binder { call transfer };
-allow vendor_hal_oplus_touch_aidl_client vendor_hal_oplus_touch_aidl_server:fd { use };
+allow vendor_hal_oplus_touch_aidl_client vendor_hal_oplus_touch_aidl_server:fd use;
 allow vendor_hal_oplus_touch_aidl_server servicemanager:binder { call transfer };
 allow vendor_hal_oplus_touch_aidl_server servicemanager:fd use;
 allow vendor_hal_oplus_touch_aidl_server vendor_hal_oplus_touch_aidl_client:binder { call transfer };
 allow vendor_hal_oplus_touch_aidl_server vendor_hal_oplus_touch_aidl_client:fd use;
 
-allow hal_health_default hal_oplus_touch_aidl_default:binder { call transfer };
-allow hal_health_default hal_oplus_touch_aidl_default:fd use;
-allow hal_oplus_touch_aidl_default fuse:dir { write create add_name search };
-allow hal_oplus_touch_aidl_default fuse:file { read write create open };
 allow hal_oplus_touch_aidl_default hal_fingerprint_default:binder transfer;
-allow hal_oplus_touch_aidl_default hal_health_default:binder transfer;
 allow hal_oplus_touch_aidl_default hal_oplus_touch_aidl_default_exec:file { read getattr map execute open entrypoint };
 allow hal_oplus_touch_aidl_default hal_oplus_touch_daemon:binder call;
 allow hal_oplus_touch_aidl_default hal_oplus_touch_daemon:unix_dgram_socket sendto;
-allow hal_oplus_touch_aidl_default mnt_user_file:dir search;
-allow hal_oplus_touch_aidl_default mnt_user_file:lnk_file read;
 allow hal_oplus_touch_aidl_default oplus_touchDaemon_device:chr_file { ioctl read write getattr open };
 allow hal_oplus_touch_aidl_default servicemanager:binder { call transfer };
 allow hal_oplus_touch_aidl_default socket_device:dir { read write create getattr setattr unlink open add_name remove_name };
