@@ -3,13 +3,5 @@ allow hal_power_default hal_oplus_touch_aidl_service:service_manager find;
 allow hal_power_default hal_oplus_touch_aidl_default:binder { call transfer };
 allow hal_power_default hal_oplus_touch_aidl_default:fd use;
 
-rw_dir_file(hal_power_default, proc_sched)
-rw_dir_file(hal_power_default, sysfs_devices_system_cpu)
 rw_dir_file(hal_power_default, vendor_proc_display)
-rw_dir_file(hal_power_default, vendor_sysfs_devfreq)
-rw_dir_file(hal_power_default, vendor_sysfs_graphics)
-rw_dir_file(hal_power_default, vendor_sysfs_kgsl)
-rw_dir_file(hal_power_default, vendor_sysfs_scsi_host)
 rw_dir_file(hal_power_default, vendor_sysfs_sde_crtc)
-
-set_prop(hal_power_default, vendor_powerhal_prop)
