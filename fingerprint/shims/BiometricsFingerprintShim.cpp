@@ -44,21 +44,9 @@ int property_get(const char* key, char* value, const char* default_value) {
     static auto property_get_orig =
             reinterpret_cast<typeof(property_get)*>(dlsym(RTLD_NEXT, "property_get"));
 
-    // Do we really need this override ?
-    if (strcmp(key, "ro.boot.mode") == 0) {
-        ALOGV("Returning normal for ro.boot.mode");
-        return strlen(strcpy(value, "normal"));
-    }
-
     if (strcmp(key, "ro.boot.vbmeta.device_state") == 0) {
         ALOGV("Returning unlocked for ro.boot.vbmeta.device_state");
         return strlen(strcpy(value, "unlocked"));
-    }
-
-    // This property seems unused in the newer fingerprint implementation
-    if (strcmp(key, "ro.boot.verifiedbootstate") == 0) {
-        ALOGV("Returning orange for ro.boot.verifiedbootstate");
-        return strlen(strcpy(value, "orange"));
     }
 
     return property_get_orig(key, value, default_value);
