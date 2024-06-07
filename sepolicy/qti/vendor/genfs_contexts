@@ -22,11 +22,6 @@ genfscon sysfs /kernel/oplus_display    u:object_r:vendor_sysfs_graphics:s0
 # Engineering
 genfscon proc /oplus_rf    u:object_r:vendor_proc_engineer:s0
 
-# Extcon
-genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/extcon u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/soc/soc:spf_core_platform/soc:spf_core_platform:lpass-cdc/wcd938x-codec/extcon u:object_r:sysfs_extcon:s0
-genfscon sysfs /class/extcon/extcon0/ u:object_r:sysfs_extcon:s0
-
 # Fingerprint
 genfscon proc /fp_id    u:object_r:vendor_proc_fingerprint:s0
 
@@ -45,7 +40,6 @@ genfscon proc /shell-temp           u:object_r:vendor_proc_oplus_touch:s0
 
 
 # Perfmgr
-genfscon proc /sys/kernel/sched_energy_aware                                          u:object_r:proc_sched:s0
 genfscon proc /sys/walt/sched_busy_hyst_ns                                        u:object_r:proc_sched:s0
 genfscon proc /sys/walt/sched_busy_hysteresis_enable_cpus                         u:object_r:proc_sched:s0
 genfscon proc /sys/walt/sched_min_task_util_for_boost                             u:object_r:proc_sched:s0
