@@ -2,7 +2,7 @@
 type hal_oplus_cammidasservice_aidl_service, hal_service_type, service_manager_type;
 
 # OSENSE
-type fwk_osense_aidl_service, hal_service_type, service_manager_type;
+type hal_oplus_osense_aidl_service, hal_service_type, service_manager_type;
 
 # Oplus touch
 type hal_oplus_touch_aidl_service, protected_service, service_manager_type;
