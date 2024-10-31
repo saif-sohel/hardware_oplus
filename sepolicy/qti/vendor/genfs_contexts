@@ -30,9 +30,6 @@ genfscon proc /fp_id    u:object_r:vendor_proc_fingerprint:s0
 # Graphics
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-    u:object_r:vendor_sysfs_sde_crtc:s0
 
-# Input devices
-genfscon proc /bus/input/devices  u:object_r:vendor_proc_oplus_scheduler:s0
-
 # Performance
 genfscon proc /oplus_scheduler    u:object_r:vendor_proc_oplus_scheduler:s0
 genfscon proc /oplus_scheduler/sched_assist u:object_r:vendor_proc_oplus_scheduler:s0
