@@ -22,10 +22,6 @@
 #include <drm/sde_drm.h>
 #endif
 
-uint32_t getUdfpsAodZOrder(uint32_t z) {
-    return 0x41000011;
-}
-
 uint32_t getUdfpsDimZOrder(uint32_t z) {
     return 0x41000005;
 }
