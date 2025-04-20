@@ -1,6 +1,12 @@
 # Consumer IR
 type vendor_oplusir_device, dev_type;
 
+# Audio Amplifier
+type oplus_awsmartpa_device, dev_type;
+
+# Camera
+type vendor_camera_turbo_device, dev_type;
+
 # Fingerprint
 type fingerprint_device, dev_type;
 
