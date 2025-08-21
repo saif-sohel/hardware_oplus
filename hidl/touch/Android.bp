@@ -15,8 +15,6 @@ cc_binary {
         "libhidlbase",
         "libutils",
         "vendor.lineage.touch@1.0",
-        "vendor.oplus.hardware.touch-V1-ndk",
-        "libbinder_ndk",
     ],
     include_dirs: select(soong_config_variable("OPLUS_LINEAGE_TOUCH_HAL", "INCLUDE_DIR"), {
         any @ flag_val: [flag_val],
